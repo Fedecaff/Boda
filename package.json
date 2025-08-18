@@ -1,8 +1,0 @@
-{
-  "name": "invitacion-boda",
-  "version": "1.0.0",
-  "description": "Invitación digital de boda - Federico & Georgina",
-  "scripts": {
-    "start": "npx serve -s . -l $PORT"
-  }
-}
