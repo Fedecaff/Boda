@@ -1,0 +1,28 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Node modules (si en el futuro agregas dependencias)
+node_modules/
+
+# Archivos de build (si en el futuro agregas un build process)
+dist/
+build/
+
+# Variables de entorno
+.env
+.env.local
+.env.production

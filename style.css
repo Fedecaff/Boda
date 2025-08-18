@@ -1,0 +1,625 @@
+
+  
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f9f4f0;
+      color: #3b3b3b;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff8f5;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 24px;
+      background-color:  #dbe6d2;
+      color: rgb(71, 69, 69);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #849974;
+      color: #7a6767;
+      transform: scale(1.05);
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    .divider {
+      height: 1px;
+      background-color: #ddd;
+      margin: 40px auto;
+      width: 60%;
+    }
+    #momentos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.momentos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+
+
+.momento:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icono-grande {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.momento h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.momento p {
+  font-size: 0.95em;
+}
+
+/* Ya existe en tu CSS, pero por si no */
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+#luna-de-miel {
+  padding: 60px 20px;
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.frase-luna {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.mensaje-contribucion {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #849974;
+  margin: 20px 0;
+  line-height: 1.5;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.detalle-contribucion {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #666;
+  display: block;
+  margin-top: 8px;
+}
+ /*Si después querés que el botón tenga un enlace real (por ejemplo, a un alias de cuenta bancaria o Mercado Pago), solo cambiás el href="#" por el enlace que uses.*/
+
+
+ #info-evento {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dresscode-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.ubicacion {
+  margin-top: 40px;
+}
+
+.ubicacion h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.ubicacion p {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.boton-mapa {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #849974;
+  color: #f2f0f0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-mapa:hover {
+  background-color:  #3b3b3b;
+  transform: scale(1.05);
+}
+
+  .svg-separador {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.svg-separador svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+
+.icono-grande {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.icono-grande:hover {
+  transform: scale(1.1);
+}
+
+
+/*Podés ajustar el width si algún ícono te queda muy chico o muy grande.*/
+
+.momento {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ===== Estilo para el contador ===== */
+#contador {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+#contador h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#contador p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+#reloj {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#reloj div {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 15px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 90px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+#reloj div:hover {
+  transform: scale(1.05);
+}
+
+#reloj span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif; /* Fuente estilo reloj digital */
+  color: #fff;
+}
+
+#reloj small {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f0e9e2;
+}
+
+/* Imagen decorativa del contador */
+.icono-grande {
+  max-width: 140px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Línea decorativa */
+.divider-decorativa {
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+
+#frase-decorativa {
+  background-color: #849974;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px 40px 20px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#frase-decorativa h2 {
+  font-family: 'Dancing Script', cursive, 'Playfair Display', serif;
+  font-size: 2.2em;
+  font-weight: normal;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(60,60,60,0.08);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Fondo base para los .momento en sección clara */
+section[style*="#F9F6F1"] .momento {
+  background-color: #dbe6d2 ;
+}
+
+/* Al pasar el cursor, un poco más oscuro */
+section[style*="#F9F6F1"] .momento:hover {
+  background-color: #849974;
+}
+
+/* Fondo base para el recuadro de Dress Code */
+#info-evento .info-evento {
+  background-color: #dbe6d2;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 340px;           /* Fija el ancho del recuadro */
+  margin: 0 auto 30px auto;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.04);
+  box-sizing: border-box; /* Asegura que el padding no sume al ancho */
+  word-break: break-word; /* Evita desbordes de texto */
+}
+
+/* Al pasar el cursor, un poco más oscuro */
+#info-evento .info-evento:hover {
+  background-color: #849974;
+  transform: scale(1.03);
+}
+
+#ubicacion .ubicacion {
+  background-color: #dbe6d2;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 340px;
+  margin: 0 auto 30px auto;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.04);
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+#ubicacion .ubicacion:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+#luna-de-miel .info-evento {
+ background-color: #dbe6d2;   
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 340px;
+  margin: 0 auto 30px auto;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(60,60,60,0.04);
+  box-sizing: border-box;
+  word-break: break-word;
+  color: #3b3b3b;                /* Texto oscuro para contraste */
+}
+
+#luna-de-miel .info-evento:hover {
+  background-color: #acc798;    /* Un poco más oscuro al pasar el cursor */
+  transform: scale(1.03);
+  color: #3b3b3b;
+}
+
+#btn-musica {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: #849974;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5em;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn-musica:hover {
+  background: #b5dc98;
+  transform: scale(1.1);
+}
+
+
+.colores-dresscode {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+}
+.color-circulo {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+}
+
+.foto-destacada {
+  max-width: 45%;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,60,0.10);
+}
+
+#ubicacion h3,
+#ubicacion p {
+  color: black; 
+}
+
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-contenedor img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Botones */
+.carrusel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carrusel button:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.carrusel .prev { left: 10px; }
+.carrusel .next { right: 10px; }
+
+
+.carousel-item img {
+  max-height: 50%; /* Ajustá la altura según lo que quieras */
+  object-fit: cover; /* Recorta la imagen manteniendo proporción */
+}
+
+/*
+#inicio {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #fff; 
+}
+
+#inicio::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(40, 60, 40, 0.35); 
+  z-index: 1;
+}
+
+#inicio > * {
+  position: relative;
+  z-index: 2;
+}
+  */
+
+/* ====== Ajustes responsivos ====== */
+/* Forzar tamaño responsivo del título principal aunque tenga estilo inline */
+#inicio h1 {
+  font-size: clamp(2.2rem, 8vw, 4.5rem) !important;
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding: 56px 20px;
+  }
+  .foto-destacada {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 48px 18px;
+  }
+
+  /* Tarjetas flexibles */
+  .momento {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* Recuadros con ancho líquido */
+  #info-evento .info-evento,
+  #ubicacion .ubicacion,
+  #luna-de-miel .info-evento {
+    width: min(340px, 92vw);
+  }
+
+  /* Foto destacada más grande en móviles */
+  .foto-destacada {
+    max-width: 88%;
+  }
+
+  /* Contador más compacto */
+  #reloj div {
+    min-width: 80px;
+    padding: 16px 12px;
+  }
+  #reloj span {
+    font-size: 2.1rem;
+  }
+
+  /* Botones del carrusel algo más chicos */
+  .carrusel button {
+    padding: 8px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 16px;
+  }
+
+  header p {
+    font-size: 1.05em;
+  }
+
+  #reloj {
+    gap: 14px;
+  }
+  #reloj div {
+    min-width: 74px;
+    padding: 14px 10px;
+  }
+  #reloj span {
+    font-size: 1.9rem;
+  }
+
+  /* Íconos algo más chicos para caber mejor */
+  .icono-grande {
+    max-width: 100px;
+  }
+
+  /* Foto destacada al 94% del ancho */
+  .foto-destacada {
+    max-width: 94%;
+  }
+
+  /* Botón de música más compacto en pantallas pequeñas */
+  #btn-musica {
+    width: 44px;
+    height: 44px;
+    top: 16px;
+    right: 16px;
+  }
+
+  /* Carrusel: botones más pequeños */
+  .carrusel button {
+    padding: 6px;
+    font-size: 18px;
+  }
+}
