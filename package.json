@@ -1,12 +1,12 @@
 {
-  "name": "boda",
+  "name": "invitacion-boda",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Invitación digital de boda - Federico & Georgina",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx serve -s . -l $PORT"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["boda", "invitacion", "digital"],
+  "author": "Federico Caffettaro",
+  "license": "MIT"
 }
