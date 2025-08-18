@@ -2,11 +2,7 @@
   "name": "invitacion-boda",
   "version": "1.0.0",
   "description": "Invitación digital de boda - Federico & Georgina",
-  "main": "index.html",
   "scripts": {
     "start": "npx serve -s . -l $PORT"
-  },
-  "keywords": ["boda", "invitacion", "digital"],
-  "author": "Federico Caffettaro",
-  "license": "MIT"
+  }
 }
