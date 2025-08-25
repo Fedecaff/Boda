@@ -65,23 +65,60 @@ actualizarContador();
 
   // Estado inicial del ícono
   actualizarIcono();
-// Carrusel
+// Carrusel infinito
 const carruselContenedor = document.querySelector('.carrusel-contenedor');
 const fotos = document.querySelectorAll('.carrusel-contenedor img');
 let indice = 0;
+
+// Clonar primera y última foto para el efecto infinito
+const primeraFoto = fotos[0].cloneNode(true);
+const ultimaFoto = fotos[fotos.length - 1].cloneNode(true);
+carruselContenedor.appendChild(primeraFoto);
+carruselContenedor.insertBefore(ultimaFoto, fotos[0]);
+
+// Ajustar el índice inicial
+indice = 1;
 
 document.querySelector('.next').addEventListener('click', () => {
   avanzarCarrusel();
 });
 
 document.querySelector('.prev').addEventListener('click', () => {
-  indice = (indice - 1 + fotos.length) % fotos.length;
-  actualizarCarrusel();
+  retrocederCarrusel();
 });
 
 function avanzarCarrusel() {
-  indice = (indice + 1) % fotos.length;
+  indice++;
   actualizarCarrusel();
+  
+  // Si llegamos al clon de la primera foto, saltar a la real
+  if (indice >= fotos.length + 1) {
+    setTimeout(() => {
+      indice = 1;
+      carruselContenedor.style.transition = 'none';
+      actualizarCarrusel();
+      setTimeout(() => {
+        carruselContenedor.style.transition = 'transform 0.5s ease-in-out';
+      }, 10);
+    }, 500);
+  }
+}
+
+function retrocederCarrusel() {
+  indice--;
+  actualizarCarrusel();
+  
+  // Si llegamos al clon de la última foto, saltar a la real
+  if (indice <= 0) {
+    setTimeout(() => {
+      indice = fotos.length;
+      carruselContenedor.style.transition = 'none';
+      actualizarCarrusel();
+      setTimeout(() => {
+        carruselContenedor.style.transition = 'transform 0.5s ease-in-out';
+      }, 10);
+    }, 500);
+  }
 }
 
 function actualizarCarrusel() {
