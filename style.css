@@ -464,14 +464,14 @@ section[style*="#F9F6F1"] .momento:hover {
 
 .carrusel-contenedor img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   flex-shrink: 0;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   object-fit: cover;
 }
 
-/* Fotos horizontales específicas - usar contain sin fondo */
+/* Fotos horizontales específicas */
 .carrusel-contenedor img[src*="p1.jpg"],
 .carrusel-contenedor img[src*="p2.jpg"],
 .carrusel-contenedor img[src*="p5.jpg"],
@@ -635,8 +635,8 @@ section[style*="#F9F6F1"] .momento:hover {
     font-size: 18px;
   }
   
-  /* Carrusel más alto en móviles para fotos horizontales */
+  /* Carrusel más alto en móviles */
   .carrusel-contenedor img {
-    height: 300px;
+    height: 450px;
   }
 }
