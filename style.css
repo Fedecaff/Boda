@@ -471,14 +471,9 @@ section[style*="#F9F6F1"] .momento:hover {
   object-fit: cover;
 }
 
-/* Fotos horizontales específicas */
-.carrusel-contenedor img[src*="p1.jpg"],
-.carrusel-contenedor img[src*="p2.jpg"],
-.carrusel-contenedor img[src*="p5.jpg"],
-.carrusel-contenedor img[src*="p7.jpg"],
-.carrusel-contenedor img[src*="p8.jpg"] {
-  object-fit: contain;
-  background-color: #f5f5f5;
+/* Todas las fotos usan cover para llenar el espacio */
+.carrusel-contenedor img {
+  object-fit: cover;
 }
 
 /* Botones */
