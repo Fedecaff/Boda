@@ -135,6 +135,110 @@
   display: block;
   margin-top: 8px;
 }
+
+/* Botón de contribuir */
+.boton-donar {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #849974;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+.boton-donar:hover {
+  background-color: #3b3b3b;
+  transform: scale(1.05);
+}
+
+/* Ventana emergente */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -20px;
+  margin-right: -10px;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+.datos-cuenta {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  border-left: 4px solid #849974;
+}
+
+.datos-cuenta h3 {
+  color: #849974;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.datos-cuenta p {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.alias {
+  background-color: #e8f5e8;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #2d5a2d;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alias:hover {
+  background-color: #d4e8d4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
  /*Si después querés que el botón tenga un enlace real (por ejemplo, a un alias de cuenta bancaria o Mercado Pago), solo cambiás el href="#" por el enlace que uses.*/
 
 

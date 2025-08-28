@@ -65,6 +65,49 @@ actualizarContador();
 
   // Estado inicial del ícono
   actualizarIcono();
+
+  // Funcionalidad del botón de contribuir
+  const modal = document.getElementById('modal-contribucion');
+  const btnContribuir = document.getElementById('btn-contribuir');
+  const cerrar = document.querySelector('.cerrar');
+  const aliasCuenta = document.getElementById('alias-cuenta');
+
+  // Abrir modal
+  btnContribuir.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'block';
+  });
+
+  // Cerrar modal
+  cerrar.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Cerrar modal al hacer clic fuera
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Copiar alias al hacer clic
+  aliasCuenta.addEventListener('click', () => {
+    navigator.clipboard.writeText('bodafg20').then(() => {
+      // Mostrar mensaje de copiado
+      const mensajeOriginal = aliasCuenta.textContent;
+      aliasCuenta.textContent = '¡Alias copiado!';
+      aliasCuenta.style.backgroundColor = '#b5dc98';
+      aliasCuenta.style.color = '#2d5a2d';
+      
+      setTimeout(() => {
+        aliasCuenta.textContent = mensajeOriginal;
+        aliasCuenta.style.backgroundColor = '#e8f5e8';
+        aliasCuenta.style.color = '#2d5a2d';
+      }, 2000);
+    }).catch(err => {
+      console.log('Error al copiar:', err);
+    });
+  });
 // Carrusel infinito
 const carruselContenedor = document.querySelector('.carrusel-contenedor');
 const fotos = document.querySelectorAll('.carrusel-contenedor img');
