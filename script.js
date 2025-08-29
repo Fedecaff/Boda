@@ -35,15 +35,12 @@ actualizarContador();
   const iconoMusica = document.getElementById('icono-musica');
 
   function actualizarIcono() {
-    const textoMusica = document.querySelector('.texto-musica');
     if (musica.paused) {
       iconoMusica.src = 'imagen/play-button.png';
       btnMusica.setAttribute('aria-label', 'Reproducir música');
-      textoMusica.textContent = 'Música';
     } else {
       iconoMusica.src = 'imagen/reproducir-pausar.png';
       btnMusica.setAttribute('aria-label', 'Pausar música');
-      textoMusica.textContent = 'Pausar';
     }
   }
 
